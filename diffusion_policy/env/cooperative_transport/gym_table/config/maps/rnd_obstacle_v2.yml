@@ -1,0 +1,5 @@
+TABLE: [[0.2, 0.2, 3.14], [0.2, 0.4, 3.14], [0.2, 0.6, 3.14], [0.2, 0.8, 3.14]]
+OBSTACLES:
+- POSITIONS: [[0.4, 0.5], [0.6, 0.3], [0.6, 0.7]] #these are factors multiplied to window width and height (480,300), (720, 180), (720,420)
+  SIZES: [[50, 50]] # in pixels
+GOAL: [[0.8, 0.3], [0.8, 0.5], [0.8, 0.7]]

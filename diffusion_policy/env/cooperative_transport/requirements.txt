@@ -1,0 +1,9 @@
+gym
+matplotlib
+numpy
+pillow
+pre-commit
+pygame
+stable-baselines3
+tensorboard
+torch

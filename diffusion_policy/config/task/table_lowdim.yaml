@@ -1,0 +1,36 @@
+name: table_lowdim
+
+obs_dim: 18 # 18 if no grid, 84 if grid
+action_dim: 4
+keypoint_dim: 0
+obs_eef_target: True
+
+env_runner:
+  _target_: diffusion_policy.env_runner.table_lowdim_runner.TableLowdimRunner
+  n_train: 6
+  n_train_vis: 2
+  train_start_seed: 0
+  n_test: 50
+  n_test_vis: 15
+  test_start_seed: 100000
+  max_steps: 1000
+  n_obs_steps: ${n_obs_steps}
+  n_action_steps: ${n_action_steps}
+  fps: 10
+  # past_action: ${past_action_visible}
+  past_action: ${human_act_as_cond}
+  abs_action: False
+  obs_eef_target: ${task.obs_eef_target}
+  n_envs: null
+
+dataset:
+  _target_: diffusion_policy.dataset.table_lowdim_dataset.TableLowdimDataset
+  zarr_path: data/table/table_10Hz.zarr
+  horizon: ${horizon}
+  pad_before: ${eval:'${n_obs_steps}-1'}
+  pad_after: ${eval:'${n_action_steps}-1'}
+  obs_eef_target: ${task.obs_eef_target}
+  human_act_as_cond: ${human_act_as_cond}
+  use_manual_normalizer: False
+  seed: 42
+  val_ratio: 0.02

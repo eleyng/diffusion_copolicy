@@ -1,0 +1,23 @@
+data_base: '/arm/u/eleyng'
+data_dir: 'experimental-data-pygame-new/one-player-bc-multimodal'  #'experimental-data/single-sample-state-aug-noised' #'single-sample' # -freq-10-success-D'
+experiment_name: 'one-player-bc-multimodal-3' 
+vis_vae_name: 'vis_vae_Map_D_LSIZE-16' #vis_vae_all_Map_LSIZE-16' 
+vis_mode: 'off' # img or vae or off (for states)
+single: True #False  #True for single agent BC, false for joint BC
+base_model: 'BCRNN' # BC or BCRNN or aeBCRNN
+mode: 'training' # options: rollout (for validation or planning for control), training (for just training vis and dyn models)
+train_stats_f: 'train_stats_f.npz'
+LSIZE: 6
+RSIZE: 512
+n_layers: 2
+n_classes: 25 #can also be None if regression
+BSIZE: 16  # batch-size
+SEQ_LEN: 64 
+NGAUSS: 10
+epochs: 10000
+horizon: 8
+freq: 10 
+time_limit: 1
+beta_min: 0
+beta_max: 1
+beta_interval: 1000

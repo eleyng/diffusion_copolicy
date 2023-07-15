@@ -1,0 +1,4 @@
+OBSTACLES:
+- POSITIONS: [[0.5, 0.5], [0.5, 0.3], [0.5, 0.7], [0.3, 0.5], [0.3, 0.3], [0.3, 0.7], [0.6, 0.3], [0.6, 0.7], [0.6, 0.5]] #these are factors multiplied to window width and height
+  SIZES: [[50, 50]] # in pixels
+GOAL: [[0.8, 0.5], [0.8, 0.3], [0.8, 0.7]]
