@@ -2,12 +2,20 @@
 Code for [Diffusion Co-Policy for Synergistic Human-Robot Collaborative Tasks](https://arxiv.org/abs/2305.12171).
 
 ## Installation
-1. For model training:
-  Follow the installation instructions [here](https://github.com/columbia-ai-robotics/diffusion_policy).
-2. For simulation evaluation:
-  Continue installing in the same environment from step 1, with the instructions [here](https://github.com/eleyng/table-carrying-ai).
-3. For real robot evaluation:
-  Further install with instructions [here](https://github.com/armlabstanford/human_robot_transport).
+- **Simulation**:      
+  First, install the diffusion simulation environment by cloning this repository and running the following commands (pulled from the instructions [here](https://github.com/real-stanford/diffusion_policy?tab=readme-ov-file#%EF%B8%8F-installation)):  
+  ```
+  sudo apt install -y libosmesa6-dev libgl1-mesa-glx libglfw3 patchelf`  
+  mamba env create -f conda_environment.yaml
+  ```
+  If you prefer installing via conda, run `conda env create -f conda_environment.yaml`.
+  Continue installing the table-carrying simulator in the same environment. After cloning [this](https://github.com/eleyng/table-carrying-ai) repository  and entering the directory, run the following:
+  ```
+  pip install -r requirements.txt --use-deprecated=legacy-resolver
+  pip install -e .
+  ```
+- **Real robot evaluation**:  
+  Further install the ROS environment with instructions [here](https://github.com/armlabstanford/human_robot_transport).
 
 ## Dataset
 TODO: add dataset link
