@@ -18,7 +18,11 @@ Code for [Diffusion Co-Policy for Synergistic Human-Robot Collaborative Tasks](h
   Further install the ROS environment with instructions [here](https://github.com/armlabstanford/human_robot_transport).
 
 ## Dataset
-TODO: add dataset link
+Pull the dataset from Google Drive [here](https://drive.google.com/file/d/1bpsAckORlXIx_C2RnbluSQf4s7hSMpnZ/view?usp=drive_link):
+```
+curl -L -o data.zip "https://drive.google.com/uc?export=download&id=1bpsAckORlXIx_C2RnbluSQf4s7hSMpnZ"
+unzip data.zip; rm data.zip
+```
 
 ## Training
 To train Diffusion Co-policy, launch training with config:
