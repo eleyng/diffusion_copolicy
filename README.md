@@ -43,6 +43,7 @@ Evaluation scripts were tested on a PC with NVIDIA CUDA-enabled 3090Ti GPU, Ubun
 ### HW Requirements for real-human evaluation (real. env.)  
 - 2x [Interbotix Locobot wx250](https://www.trossenrobotics.com/locobot-wx250.aspx)  
 - Motion capture system  
+- Pin rod and mechanical fasteners (to assemble pin-rod connection between locobots)
 
 For simulation, the trained diffusion co-policy must be evaluated in the table-carrying-ai directory. In the `table-carrying-ai` directory, move the trained checkpoints to the `trained_models` directory and run the following:    
 ```
