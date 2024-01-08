@@ -26,7 +26,7 @@ env_runner:
 
 dataset:
   _target_: diffusion_policy.dataset.table_lowdim_dataset.TableLowdimDataset
-  zarr_path: data/table/table_past_actions.zarr
+  zarr_path: data/table/table_10Hz.zarr
   horizon: ${horizon}
   pad_before: ${eval:'${n_obs_steps}-1'}
   pad_after: ${eval:'${n_action_steps}-1'}
