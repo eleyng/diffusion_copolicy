@@ -411,7 +411,7 @@ class TableEnv(gym.Env):
         seq_length=1,
         obs="discrete",
         control="joystick",
-        map_config="/home/eleyng/diffusion_policy/diffusion_policy/env/cooperative_transport/gym_table/config/maps/rnd_obstacle_v2.yml",
+        map_config=None, #"/home/eleyng/diffusion_policy/diffusion_policy/env/cooperative_transport/gym_table/config/maps/rnd_obstacle_v2.yml",
         load_map=None,
         occupancy_grid=False,
         run_mode="demo",

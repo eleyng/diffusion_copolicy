@@ -44,6 +44,7 @@ class TableLowdimRunner(BaseLowdimRunner):
         obs_eef_target=True,
         tqdm_interval_sec=5.0,
         n_envs=None,
+        map_config=None,
     ):
         super().__init__(output_dir)
 
@@ -60,6 +61,7 @@ class TableLowdimRunner(BaseLowdimRunner):
                         TableEnv(
                             render_mode="headless",
                             control="joystick",
+                            map_config=map_config,
                             run_mode="demo",
                             run_name="diffusion-training",
                             dt=CONST_DT,
